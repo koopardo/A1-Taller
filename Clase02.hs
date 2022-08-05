@@ -20,7 +20,7 @@ posicPrimerPar (a,b,c) | mod c 2 == 0 = 3
 posicPrimerPar (a,b,c) | mod (a + b + c) 2 /= 0 = 4
 
 crearPar :: a -> b -> (a,b)
-crearPar a b = (a,b)
+crearPar x y = (x,y)
 
 invertir :: (a,b) -> (b,a)
-invertir (a,b) = (b,a)
+invertir (x,y) = (y,x)
