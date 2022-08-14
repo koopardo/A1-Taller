@@ -89,7 +89,7 @@ g2 n = sumaExponenteFijo n n + g2 (n-1)
 
 g3 :: Int -> Int
 g3 1 = 4
-g3 n = 2^(2*n) + g3(n-1)
+g3 n = 4*n + g3(n-1)
 
 --Ejercicio 7
 
@@ -100,9 +100,10 @@ f 1 = 1
 f n | digitosIguales n == True  = n + f(n-1)
 f n | digitosIguales n == False = f(n-1)
 
+--digitosIguales: me dice si un natural "n" tiene todos su digitos iguales
+
 digitosIguales :: Int -> Bool
-digitosIguales n | n < 0                    = undefined
-digitosIguales n | n < 10                   = True
-digitosIguales n | n < 100 && mod n 11 == 0 = True
-digitosIguales n | n < 100 && mod n 11 /= 0 = False
-digitosIguales n                            = digitosIguales (div n 10)
+digitosIguales n | n < 0                              = undefined
+digitosIguales n | n < 100 && mod n 11 == 0 || n < 10 = True
+digitosIguales n | n < 100 && mod n 11 /= 0           = False
+digitosIguales n                                      = digitosIguales (div n 10)
