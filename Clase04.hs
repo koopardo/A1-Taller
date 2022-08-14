@@ -97,8 +97,8 @@ g3 n = 4*n + g3(n-1)
 
 f :: Int -> Int
 f 1 = 1
-f n | digitosIguales n == True  = n + f(n-1)
-f n | digitosIguales n == False = f(n-1)
+f n | digitosIguales n = n + f(n-1)
+f n | digitosIguales n = f(n-1)
 
 --digitosIguales: me dice si un natural "n" tiene todos su digitos iguales
 
