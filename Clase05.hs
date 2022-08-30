@@ -159,7 +159,6 @@ tomaValorMax a b | sumaDivisores a <= sumaDivisores b = tomaValorMax (a+1) b
 
 --tomaValorMin: nos devuelve i perteneciente al intervalo [a,b] tal que sumaDivisores en i es mínimo
 
-
 tomaValorMin :: Int -> Int -> Int
 tomaValorMin a b | a == b                             = a                  
 tomaValorMin a b | sumaDivisores a < sumaDivisores b  = tomaValorMin a (b-1)
