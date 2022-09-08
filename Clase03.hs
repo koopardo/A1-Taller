@@ -6,7 +6,7 @@ esMultiploDe3 2 = False
 esMultiploDe3 3 = True
 esMultiploDe3 n = esMultiploDe3 (n-3)
 
---Ejercici 2
+--Ejercicio 2
 
 sumaImpares :: Int -> Int
 sumaImpares 1 = 1
